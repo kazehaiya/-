@@ -35,25 +35,38 @@
 			cursor: pointer;
 		}
 
-		li::before {
+		/* li::before {
 			content: "";
 			position: absolute;
-			top: 0;
-			left: 100%;
+			right: 100%;
+			bottom: 0;
 			width: 0;
-			height: 100%;
 			border-bottom: 2px solid #000;
 			transition: 0.2s all linear;
 		}
 
 		li:hover::before {
 			width: 100%;
-			left: 0;
+			right: 0;
+		} */
+
+		li::before {
+			content: "";
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 0;
+			border-bottom: 2px solid #000;
+			transition: 0.2s all linear;
+		}
+
+		li:hover::before {
+			width: 100%;
 			transition-delay: 0.1s;
 		}
 
 		li:hover~li::before {
-			left: 0;
+			right: 100%;
 		}
 	</style>
 </head>
