@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>纯CSS动画</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html, body {
+			height: 100vh;
+			width: 100vw;
+			overflow: hidden;
+			text-align: center;
+			background-color: #f2f2f2;
+		}
+
+		.inout {
+			position: relative;
+			display: inline-block;
+			line-height: 1;
+			padding: 10px 0;
+		}
+		
+		.inout::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			border-bottom: 2px solid palevioletred;
+			transition: 0.2s transform linear;
+			transform: scaleX(0);
+			transform-origin: 100% 0;
+		}
+
+		.inout:hover::before {
+			transform: scaleX(1);
+			transform-origin: 0 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="inout">左进右出动画</div>
+</body>
+</html>
