@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS正方形</title>
+    <style type="text/css" media="screen">
+        * {padding: 0; margin: 0;}
+        html, body {height: 100%; width: 100%;}
+        .wrapper {height: inherit}
+
+        .square1 {
+            background-color: red;
+            height: 30vh;   /* 或者vw */
+            width: 30vh;    /* 或者vw */
+        }
+
+        .square2 {
+            background-color: yellow;
+            height: 0;
+            padding: 10% 0;
+            width: 20%;
+        }
+
+        .square3 {
+            background-color: green;
+            overflow: hidden;
+            width: 10%;
+        }
+        .square3::after {
+            content: '';
+            display: block;
+            margin-top: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="square1"></div>
+        <div class="square2"></div>
+        <div class="square3"></div>
+    </div>
+</body>
+</html>
